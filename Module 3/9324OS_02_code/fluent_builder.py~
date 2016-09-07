@@ -1,0 +1,24 @@
+class Pizza(object):
+
+	class PizzaBuilder(object):
+		def __init__(self):
+			self.extra_cheese = False
+			self.garlic = False
+			
+		def add_garlic(self):
+			self.garlic = True
+			return self
+			
+		def add_extra_cheese(self):
+			self.extra_cheese = True
+			return self
+			
+		def build(self):
+			return Pizza(self)
+			
+	def __init__(self, builder):
+		self.garlic = builder.garlic
+		self.extra_cheese  = builder.extra_cheese
+
+		
+pizza = Pizza.PizzaBuilder().add_garlic().add_extra_cheese().build()

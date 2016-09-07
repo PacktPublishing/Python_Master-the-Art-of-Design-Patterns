@@ -1,0 +1,51 @@
+import time
+
+SLOW = 3                        # in seconds
+LIMIT = 5                       # in characters
+
+def pairs(seq):
+    n = len(seq)
+    for i in range(n):
+        yield seq[i], seq[(i + 1) % n]
+
+def allUniqueSort(s):
+   if len(s) > LIMIT:
+       time.sleep(SLOW)
+   srtStr = sorted(s)
+   for (c1, c2) in pairs(srtStr):
+       if c1 == c2:
+           return False
+   return True
+
+def allUniqueSet(s):
+    if len(s) < LIMIT:
+        time.sleep(SLOW)
+    charsTable = set()
+    for c in s:
+        if c in charsTable:
+            return False
+        charsTable.add(c)
+    return True
+
+def allUnique(s, strategy):
+    return strategy(s)
+
+def main():
+    word = None
+    while not word:
+        word = input('Insert word (type quit to exit)> ')
+
+    if word == 'quit':
+        print('bye')
+        return
+
+    strategy_picked = None
+    strategies = { '1': allUniqueSet, '2': allUniqueSort }
+    while strategy_picked not in strategies.keys():
+        strategy_picked = input('Choose strategy: [1] Use a set, [2] Sort and pair> ')
+
+    strategy = strategies[strategy_picked]
+    print('allUnique({}): {}'.format(word, allUnique(word, strategy)))
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,49 @@
+from enum import Enum
+from abc import ABCMeta, abstractmethod
+
+State = Enum('State', 'new running sleeping restart')
+
+class Process:pass
+class Window:pass
+class TCP:pass
+class IP:pass
+
+class File:
+    def __init__(self, name, permissions):
+        self.name = name
+        self.permissions = permissions
+
+class Server(metaclass=ABCMeta):
+    @abstractmethod
+    def __init__(self):
+        pass
+
+    def __str__(self):
+        return self.name
+
+    def start(self):
+        print('starting {}'.format(self))
+        self.state = State.running
+
+    def restart(self):
+        print('Restarting {}'.format(self))
+        self.state = State.restart
+
+class FileServer(Server):
+    def __init__(self):
+        self.name = 'FileServer'
+        self.state = State.new
+
+    def create_file(self, name, permissions):pass
+
+class ProcessServer:pass
+class WindowServer:pass
+class NetworkServer:pass
+
+class OperatingSystem:
+    '''The facade'''
+    def __init__(self):pass
+
+s = FileServer()
+s.start()
+
