@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+<title>ToDo</title>
+{% block body %}
+    <h3>Your Tasks</h3>
+    <table border="1" >
+    <tr align="center">
+        <td>Id</td>
+        <td>Name</td>
+        <td>Status</td>
+        <td>Update</td>
+        <td>Delete</td>
+    </tr>
+    {% for todo in todos %}
+        <tr align="center">
+            <td>{{todo[0]}}</td>
+            <td>{{todo[1]}}</td>
+            {% if todo[2] %}
+                <td>Open</td>
+            {% else %}
+                <td>Closed</td>
+            {% end %}
+            {% if todo[2] %}
+                <td><a href="/todo/update/{{todo[0]}}/status/0">Close Task</a></td>
+            {% else %}
+                <td><a href="/todo/update/{{todo[0]}}/status/1">Open Task</a></td>
+            {% end %}
+            <td><a href="/todo/delete/{{todo[0]}}">X</a></td>
+        </tr>
+    {% end %}
+    </table>
+
+    <div>
+        <h3><a href="/todo/new">Add Task</a></h3>
+    </div>
+{% end %}

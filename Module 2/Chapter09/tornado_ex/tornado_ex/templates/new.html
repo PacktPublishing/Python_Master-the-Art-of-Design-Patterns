@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+<title>ToDo</title>
+{% block body %}
+    <div>
+        <h3>Add Task to your List</h3>
+        <form action="/todo/new" method="post" id="new">
+            <p><input type="text" name="name" placeholder="Enter task"/>
+            <input type="submit" class="submit" value="add" /></p>
+        </form>
+    </div>
+{% end %}
