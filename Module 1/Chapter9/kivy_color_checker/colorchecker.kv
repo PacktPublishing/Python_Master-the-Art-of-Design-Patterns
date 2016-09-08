@@ -1,0 +1,29 @@
+BoxLayout:
+    colorbox: colorbox
+    BoxLayout:
+        orientation: "vertical"
+        ColorBox:
+            id: colorbox
+            size_hint_y: 2
+        Label:
+            text: app.color_name
+
+    BoxLayout:
+        orientation: "vertical"
+        Button:
+            text: "Yes"
+            on_press: app.process_response(True)
+        Button:
+            text: "No"
+            on_press: app.process_response(False)
+        Label:
+            text: "{:.2f}%".format(app.score)
+
+<ColorBox>:
+    color: app.color
+    canvas:
+        Color:
+            rgb: root.color
+        Rectangle:
+            pos: root.pos
+            size: root.size

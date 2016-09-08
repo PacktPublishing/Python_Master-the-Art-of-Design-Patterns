@@ -1,0 +1,35 @@
+BoxLayout:
+    colorbox: colorbox
+    ColorBox:
+        id: colorbox
+    GridLayout:
+        cols: 3
+        ColorName:
+            text: "Red"
+        ColorName:
+            text: "Purple"
+        ColorName:
+            text: "Blue"
+        ColorName:
+            text: "Green"
+        ColorName:
+            text: "Yellow"
+        ColorName:
+            text: "Orange"
+        ColorName:
+            text: "Grey"
+        ColorName:
+            text: "White"
+        ColorName:
+            text: "Pink"
+
+<ColorBox>:
+    canvas:
+        Color:
+            rgb: root.color
+        Rectangle:
+            pos: root.pos
+            size: root.size
+
+<ColorName@Button>:
+    on_press: app.store_color(self.text)

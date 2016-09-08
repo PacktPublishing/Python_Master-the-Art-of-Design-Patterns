@@ -1,0 +1,2 @@
+class MySubClass(object):
+    pass
