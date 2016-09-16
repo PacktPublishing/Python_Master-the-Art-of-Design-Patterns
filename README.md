@@ -1,10 +1,25 @@
 # Python_Master-the-Art-of-Design-Patterns
-Code for Python_Master the Art of Design Patterns
+By Packt
 
-Module 1 - This module is loosely divided into four major parts. In the first four chapters, we will dive into the formal principles of object-oriented programming and how Python leverages them.
-Module 2 - Building on the success of the previous edition, Learning Python Design Patterns, Second Edition will help you implement real-world scenarios with Python’s latest release, Python v3.5. We start by introducing design patterns from the Python perspective. As you progress through the module, you will learn about Singleton patterns, Factory patterns, and Façade patterns in detail. 
-Module 3 - This module focuses on design patterns in Python. Python is different than most common programming languages used in popular design patterns books. It supports duck-typing, functions are first-class citizens, and some patterns (for instance, iterator and decorator) are built-in features. The intent of this module is to demonstrate the most fundamental design patterns.
+###What will you learn
 
-Module 1: There are no code files present for Chapters 1 and 2.
-Module 2: There are no code files present for Chapter 11.
-Module 3: All chapters have code files present.
+* Discover what design patterns are and how to apply them to writing Python
+* Implement objects in Python by creating classes and defining methods
+* Separate related objects into a taxonomy of classes and describe the properties and behaviors of those objects via the class interface
+* Understand when to use object-oriented features, and more importantly when not to use them
+* Get to know proven solutions to common design issues
+* Explore the design principles that form the basis of software design, such as loose coupling, the Hollywood principle, and the Open Close principle, among others
+* Use Structural Design Patterns and find out how objects and classes interact to build larger applications
+* Improve the productivity and code base of your application using Python design patterns
+* Secure an interface using the Proxy pattern
+
+###Addational Information
+* Module 1: There are no code files present for Chapters 1 and 2
+* Module 2: There are no code files present for Chapter 11
+ 
+
+###Related Products
+
+* [Expert Python Programming](https://www.packtpub.com/application-development/expert-python-programming?utm_source=github&utm_medium=repository&utm_campaign=9781847194947)
+* [Mastering Object-oriented Python](https://www.packtpub.com/application-development/mastering-object-oriented-python?utm_source=github&utm_medium=repository&utm_campaign=9781783280971)
+* [Mastering Python [Video]](https://www.packtpub.com/big-data-and-business-intelligence/mastering-python-video?utm_source=github&utm_medium=repository&utm_campaign=9781783988969)
